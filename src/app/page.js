@@ -81,6 +81,7 @@ export default function Home() {
               key={index}
               src={trafficdata.url}
               title={`Traffic ${index}`}
+              sandbox="allow-scripts"
             />
           )
         )}
