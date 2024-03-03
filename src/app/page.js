@@ -75,6 +75,7 @@ export default function Home() {
           (index) => (
             <iframe
             className="border border-gray-900 w-auto"
+              sandbox="allow-scripts"
               key={index}
               src={trafficdata.url}
               title={`Traffic ${index}`}
