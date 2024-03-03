@@ -1,6 +1,7 @@
 "use client";
-import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+
 
 export default function Home() {
   const [trafficdata, settrafficdata] = useState({
@@ -25,6 +26,8 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-4 md:p-24 ">
       <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
         <form class="w-full md:w-[50%] mx-auto">
+      <Link href={"/post"} className="block text-center mb-2 text-xl font-medium text-white">Go to Post</Link>
+            <h2 className="bg-blue-300 p-5 rounded block text-center mb-2 text-xl font-medium text-white">WebStory</h2>
           <div class="mb-5">
             <label
               for="email"
@@ -75,7 +78,6 @@ export default function Home() {
           (index) => (
             <iframe
             className="border border-gray-900 w-auto"
-              sandbox="allow-scripts"
               key={index}
               src={trafficdata.url}
               title={`Traffic ${index}`}
